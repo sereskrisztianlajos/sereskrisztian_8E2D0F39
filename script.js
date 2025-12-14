@@ -9,6 +9,8 @@ let edzesek = [
     { nev: "Ugrókötelezés", kaloria: 550, intenzitas: "magas" }
 ];
 
+//Változás
+
 // EDZÉSEK MEGJELENÍTÉSE
 function edzesekMegjelenitese() {
     let lista = document.getElementById("lista");
