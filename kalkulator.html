@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Kalóriaszámító</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+
+    <h1>Kalóriaszámító</h1>
+
+    <nav>
+        <a href="index.html">Főoldal</a>
+        <a href="edzesek.html">Edzéstervek</a>
+        <a href="kalkulator.html">Kalóriaszámító</a>
+    </nav>
+
+    <label>Nem:</label>
+    <select id="nem">
+        <option value="ferfi">Férfi</option>
+        <option value="no">Nő</option>
+    </select>
+
+    <label>Testsúly (kg):</label>
+    <input type="number" id="suly">
+
+    <label>Edzés időtartama (perc):</label>
+    <input type="number" id="ido">
+
+    <label>Edzés típusa:</label>
+    <select id="tipus">
+        <option value="kardio">Kardió</option>
+        <option value="erosites">Erősítés</option>
+        <option value="hiit">HIIT</option>
+        <option value="jooga">Jóga</option>
+        <option value="crossfit">CrossFit</option>
+    </select>
+
+    <label>Intenzitás:</label>
+    <select id="intenzitas">
+        <option value="alacsony">Alacsony</option>
+        <option value="kozepes">Közepes</option>
+        <option value="magas">Magas</option>
+    </select>
+
+    <button onclick="kaloriaSzamitas()">Számítás</button>
+
+    <p id="eredmeny"></p>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
