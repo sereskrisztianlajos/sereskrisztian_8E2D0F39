@@ -11,6 +11,31 @@ let edzesek = [
 
 //Változás
 
+function edzesekSzamaOsszegzesTetellel() {
+    let db = 0;
+
+    for (let i = 0; i < edzesek.length; i++) {
+        db = db + 1;
+    }
+
+    document.getElementById("edzessorok").innerText =
+        "Edzésprogramok száma: " + db;
+}
+
+function legtobbKaloriasEdzesTetellel() {
+    let maxEdzes = edzesek[0];
+
+    for (let i = 1; i < edzesek.length; i++) {
+        if (edzesek[i].kaloria > maxEdzes.kaloria) {
+            maxEdzes = edzesek[i];
+        }
+    }
+
+    document.getElementById("legerosebb").innerText =
+        "Legtöbb kalóriát égető edzés: " +
+        maxEdzes.nev + " (" + maxEdzes.kaloria + " kcal)";
+        }
+
 // EDZÉSEK MEGJELENÍTÉSE
 function edzesekMegjelenitese() {
     let lista = document.getElementById("lista");
@@ -24,8 +49,9 @@ function edzesekMegjelenitese() {
         lista.appendChild(li);
     }
 
-    legerosebbEdzes();
-}
+    edzesekSzamaOsszegzesTetellel();
+    legtobbKaloriasEdzesTetellel(); 
+    }
 
 // MAXIMUM KIVÁLASZTÁS
 function legerosebbEdzes() {
